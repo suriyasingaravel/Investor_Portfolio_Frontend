@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f1115;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --card: #1a1f29;
+  --subtle: #141922;
+  --border: #2a3140;
+  --accent: #22c55e;
+  --positive: #22c55e;
+  --negative: #ef4444;
+}
+
+:root.light {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --card: #ffffff;
+  --subtle: #f1f5f9;
+  --border: #e2e8f0;
+  --accent: #16a34a;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+}
+
+@layer utilities {
+  .bg-bg {
+    background-color: var(--bg);
+  }
+  .text-text {
+    color: var(--text);
+  }
+  .text-muted-foreground {
+    color: var(--muted);
+  }
+  .bg-card {
+    background-color: var(--card);
+    padding: 10px !important;
+    margin: 20px 5px !important;
+  }
+  .bg-subtle {
+    background-color: var(--subtle);
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+  .text-positive {
+    color: var(--positive);
+  }
+  .text-negative {
+    color: var(--negative);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+}
+
+@layer components {
+  .btn {
+    border: 1px solid var(--border);
+    background-clip: padding-box;
+    padding: 12px !important;
+    border-radius: 10px;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 1px var(--border);
+  }
+  .btn-primary {
+    color: #0a0a0a;
+    background-color: var(--accent);
+  }
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: 2.1 !important;
+}
